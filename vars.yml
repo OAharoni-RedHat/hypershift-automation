@@ -22,8 +22,8 @@ clusters:
     region: us-west-1
   # If true, this will use all available availability zones in a specific region and will create the number of replicas per availability zone
   # Example: us-west-1a, us-west-1b would have 1 replica provisioned in each availability zone
-    spread_across_availability_zones: false
-    replicas: 3
+    spread_across_availability_zones: true
+    replicas: 1
     instance_type: m5.4xlarge
     image: default  # Use "default" to use hosting cluster version, or specify like "4.15.29"
 
@@ -31,7 +31,7 @@ clusters:
   - name: oa-trident-spoke
     count: 1
     region: us-east-1
-    spread_across_availability_zones: false
-    replicas: 3
+    spread_across_availability_zones: true
+    replicas: 1
     instance_type: m5.4xlarge
     image: default
